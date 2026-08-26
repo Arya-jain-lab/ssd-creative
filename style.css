@@ -1,0 +1,313 @@
+/* ================================
+   GLOBAL STYLING
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    background: #f5f7fa;
+    color: #333;
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* ================================
+   MAIN CONTAINERS
+================================ */
+
+/*
+   Your HTML uses tables as containers.
+   This centers the entire container,
+   while the content inside remains left aligned.
+*/
+
+body > table {
+    width: min(1100px, 95%) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+/* ================================
+   GENERAL TABLE STYLING
+================================ */
+
+table {
+    border-collapse: collapse;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+/*
+   Main content container tables
+   should look like cards.
+*/
+
+body > table:first-of-type {
+    background: white;
+    border-radius: 18px;
+    padding: 30px !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================================
+   HEADINGS
+================================ */
+
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #1f2937;
+}
+
+h3 {
+    margin: 4px 0;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+body > table:first-of-type tr:nth-child(2) td {
+    text-align: center !important;
+    padding: 20px 10px;
+}
+
+body > table:first-of-type tr:nth-child(2) a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #2563eb;
+    transition: 0.2s ease;
+}
+
+body > table:first-of-type tr:nth-child(2) a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+
+/* ================================
+   CONTENT
+================================ */
+
+/*
+   Paragraphs remain LEFT aligned.
+*/
+
+td p {
+    text-align: left;
+}
+
+td p[align="center"] {
+    text-align: center;
+}
+
+td {
+    vertical-align: top;
+}
+
+
+/* ================================
+   SECTION HEADINGS
+================================ */
+
+b[id] {
+    color: #111827;
+    font-size: 21px;
+}
+
+
+/* ================================
+   LINKS
+================================ */
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================================
+   LISTS
+================================ */
+
+ul {
+    text-align: left;
+    padding-left: 30px;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+
+/* ================================
+   SCHEDULE / LAB / EXAM TABLES
+================================ */
+
+/*
+   Tables with borders are the actual
+   schedule/lab/exam tables.
+*/
+
+table[border="1"] {
+    width: min(1100px, 95%) !important;
+    margin: 30px auto !important;
+    background: white;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: none !important;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Table cells */
+
+table[border="1"] th,
+table[border="1"] td {
+    padding: 14px 16px;
+    border: 1px solid #e5e7eb;
+}
+
+
+/* Table headers */
+
+table[border="1"] th {
+    background: #1f2937;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+/* Table body */
+
+table[border="1"] td {
+    background: white;
+}
+
+
+/*
+   Schedule / Lab / Exam data cells
+   are centered because these are tabular data.
+*/
+
+table[border="1"] tbody td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/* Hover effect */
+
+table[border="1"] tbody tr:hover td {
+    background: #f3f6fa;
+}
+
+
+/* ================================
+   SECTION TITLE ROWS
+================================ */
+
+table[border="1"] tr:first-child td {
+    background: #f8fafc;
+    border: none;
+    padding: 20px;
+}
+
+
+/*
+   Keep section title text LEFT aligned.
+*/
+
+table[border="1"] tr:first-child p {
+    text-align: left;
+}
+
+
+/* ================================
+   GRADE DISTRIBUTION TABLE
+================================ */
+
+table[border="1"] table {
+    width: 100% !important;
+}
+
+
+/* ================================
+   HORIZONTAL RULE
+================================ */
+
+hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 25px 0;
+}
+
+
+/* ================================
+   STAFF SECTION
+================================ */
+
+#staff {
+    font-size: 21px;
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px 8px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    body > table {
+        width: 100% !important;
+    }
+
+    table[border="1"] {
+        width: 100% !important;
+        display: block;
+        overflow-x: auto;
+    }
+
+    table[border="1"] th,
+    table[border="1"] td {
+        padding: 10px;
+        white-space: nowrap;
+    }
+}
